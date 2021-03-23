@@ -19,7 +19,8 @@ public class SortString {
             }
             int arr1 = ent[0];
             int arr2 = ent[1];
-            Operation.operateArab(str, arr1, arr2);
+
+            System.out.println(Operation.operateArab(str, arr1, arr2));
         }
 // Check string CASE when string is ROME digits
         else {
