@@ -1,7 +1,9 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Compute {
+import static java.util.Arrays.compare;
+
+public class SortString {
     public static void main(String[] args) {
 //  case when string is digits
         String str = "2+3";
@@ -39,30 +41,39 @@ public class Compute {
 
 // CASE when string is ROME digits
 
-        String text = "I+II";
+        String text = "IV+X";
         String[] words = text.split("\\s*(\\s|\\+|-|/|\\*)\\s*");
         for(int i = 0; i < words.length; i++) {
             String word = words[i];
         }
         String a = words[0];
         String b = words[1];
-        int I = a.indexOf("I");
-        int x = I;
-        if(I != -1){ x = 1;  }
-        int II = a.indexOf("II");
-        if(II != -1){ x = 2;  }
-        int III = a.indexOf("III");
-        if(III != -1){ x = 3;  }
+        int x = 0, y = 0;
 
-        int I1 = b.indexOf("I");
-        int y = I1;
-        if(I1 != -1){ y = 1;  }
-        int I2 = b.indexOf("II");
-        if(I2 != -1){ y = 2;  }
-        int I3 = b.indexOf("III");
-        if(I3 != -1){ y = 3;  }
+        if("I"== a.intern() )  {x = 1;}
+        if("II"== a.intern() )  {x = 2;}
+        if("III" == a.intern() ) {x = 3;}
+        if("IV" == a.intern() ) {x = 4;}
+        if("V" == a.intern() ) {x = 5;}
+        if("VI" == a.intern() ) {x = 6;}
+        if("VII" == a.intern() ) {x = 7;}
+        if("VIII" == a.intern() ) {x = 8;}
+        if("IX" == a.intern() ) {x = 9;}
+        if("X" == a.intern() ) {x = 10;}
+
+        if("I"== b.intern() )  {y = 1;}
+        if("II"== b.intern() )  {y = 2;}
+        if("III" == b.intern() ) {y = 3;}
+        if("IV" == b.intern() ) {y = 4;}
+        if("V" == b.intern() ) {y = 5;}
+        if("VI" == b.intern() ) {y = 6;}
+        if("VII" == b.intern() ) {y = 7;}
+        if("VIII" == b.intern() ) {y = 8;}
+        if("IX" == b.intern() ) {y = 9;}
+        if("X" == b.intern() ) {y = 10;}
 
         int c = x + y;
+
         String c1 = Integer.toString(c);
         if(c == 1) {c1 = "I";}
         if(c == 2) {c1 = "II";}
@@ -85,6 +96,7 @@ public class Compute {
         if(c == 19) {c1 = "XIX";}
         if(c == 20) {c1 = "XX";}
 
+        System.out.println("x= " + x + " y= " + y + " c = " + c);
 
 
 
